@@ -3,9 +3,6 @@ $(document).ready(function () {
         $(this).parent().next().toggleClass('open');
     });
 
-    $('.to-top').on('click', function () {
-        $('html, body').animate({ scrollTop: 0 }, '300');
-    });
     $('.mobile-toggle').on('click', function () {
         $(this).parent().toggleClass('open');
     });

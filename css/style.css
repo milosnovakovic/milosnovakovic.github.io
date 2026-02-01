@@ -185,7 +185,8 @@ section[id] {
 }
 
 #menu-btn,
-.mobile-menu a {
+.mobile-menu a,
+.to-top {
   touch-action: manipulation;
 }
 
