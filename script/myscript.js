@@ -21,15 +21,17 @@ $(window).scroll(function () {
     }
 });
 
-$('[data-fancybox]').fancybox({
-    buttons: [
-        'slideShow',
-        'share',
-        'zoom',
-        'fullScreen',
-        'close'
-    ],
-    thumbs: {
-        autoStart: true
-    }
-});
+if (typeof $.fn.fancybox !== 'undefined') {
+    $('[data-fancybox]').fancybox({
+        buttons: [
+            'slideShow',
+            'share',
+            'zoom',
+            'fullScreen',
+            'close'
+        ],
+        thumbs: {
+            autoStart: true
+        }
+    });
+}
