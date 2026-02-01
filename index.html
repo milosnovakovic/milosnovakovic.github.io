@@ -1,231 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta property="og:title" content="Milos Novakovic Portfolio">
-		<meta property="og:description" content="I’m an experienced Unity developer with passion for game development, very creative and focused on details">
-		<meta property="og:image" content="https://milosnovakovic.github.io/images/preview.jpg">
-		<meta property="og:url" content="https://milosnovakovic.github.io/index.html"> 
-		<title>Milos Novakovic Portfolio</title>
-		<link rel="icon" href="favicon.png" type="image/png">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-		<link href="./css/font-awesome/all.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="./css/style.css" type="text/css">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta property="og:title" content="Milos Novakovic Portfolio">
+	<meta property="og:description" content="Unity developer with passion for game development">
+	<meta property="og:image" content="https://milosnovakovic.github.io/images/preview.jpg">
+	<meta property="og:url" content="https://milosnovakovic.github.io/index.html">
+	<title>Milos Novakovic Portfolio</title>
+	<link rel="icon" href="favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="./css/font-awesome/all.min.css" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						emerald: {
+							50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46'
+						}
+					},
+					fontFamily: { sans: ['Inter', 'sans-serif'] }
+				}
+			}
+		};
+	</script>
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="mobile-toggle">
-				<span></span>
-				<span></span>
-				<span></span>
+<body class="font-sans text-gray-700 antialiased min-h-screen">
+	<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+		<nav class="container mx-auto px-4 py-4 flex items-center justify-between max-w-6xl">
+			<a href="#home" class="text-xl font-bold name-gradient">Miloš Novaković</a>
+			<div class="hidden md:flex items-center gap-8">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About Me</a>
+				<a href="#skills" class="nav-link">Skills</a>
+				<a href="#experience" class="nav-link">Experience</a>
+				<a href="#education" class="nav-link">Education</a>
+				<a href="#contact" class="nav-link">Contact</a>
 			</div>
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./kod-works.html">KOD.Works</a></li>
-				<li><a href="./oben.html">ObEN</a></li>
-				<li><a href="./webelinx.html">Webelinx</a></li>
-				<li><a href="./other-projects.html">Other projects</a></li>
-				<li><a href="./modeling.html">Modeling</a></li>
-			</ul>
+			<button id="menu-btn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-emerald-600" aria-label="Menu">
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+			</button>
 		</nav>
-	</header>
-	<main>
-		<div class="sidebar">
-			<div class="image">
-				<img src="./images/about-me/about-me.jpg" alt="Milos portrait image">
-			</div>
-			<div class="description">
-				<h1>Miloš Novaković</h1>
-				<p class="get-in-touch"><a href="mailto:milosnovakovic91@gmail.com" class="contact-me">Get in touch</a><a href="https://www.linkedin.com/in/milosnovakovic91/" class="contact-me">LinkedIn</a></p>
-				<a href="./images/Milos Novakovic - CV.pdf" download class="download-btn resume-desktop">Download CV</a>
-				<br />
-				<br />
-				<p class="mobile intro-text">
-					I am an experienced Unity developer with a deep passion for game development. My creativity and attention to detail drive me to build engaging and immersive experiences. I have a strong interest in gaming, trigonometry, and machine learning, and I thrive in collaborative environments. As a fast learner, I am always eager to take on new challenges and expand my skill set.
-				</p>
-				<h3>Top Skills</h3>
-				<ul class="skills">
-					<li>C#</li>
-					<li>
-						Unity
-						<br>
-						&emsp;&#x2022 Zenject
-						<br>
-						&emsp;&#x2022 DoTween
-						<br>
-						&emsp;&#x2022 DOTS
-						<br>
-						&emsp;&#x2022 ML-Agents
-					</li>
-					<li>Game Development</li>
-					<li>Firebase</li>
-					<li>Git</li>
-				</ul>
-			</div>
+		<div class="mobile-menu hidden md:hidden">
+			<a href="#home" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Home</a>
+			<a href="#about" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">About Me</a>
+			<a href="#skills" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Skills</a>
+			<a href="#experience" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Experience</a>
+			<a href="#education" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Education</a>
+			<a href="#contact" class="block py-3 px-4 hover:bg-emerald-50">Contact</a>
 		</div>
-		<div class="page-content home">
-			<div class="row">
-				<div class="col resume about-me">
-					<div class="label-container">
-						<h3 class="resume-label">About me</h3>
-					</div>
-					<div class="cv-content">
-						<p class="intro-text">I am an experienced Unity developer with a deep passion for game development. My creativity and attention to detail drive me to build engaging and immersive experiences. I have a strong interest in gaming, trigonometry, and machine learning, and I thrive in collaborative environments. As a fast learner, I am always eager to take on new challenges and expand my skill set.<br/>
-							
-							<a href="./images/Miloš Novaković - CV.pdf" download class="download-btn resume-laptop">DOWNLOAD CV</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col resume work-experience">
-					<div class="label-container">
-						<h3 class="resume-label">Work Experience</h3>
-					</div>
-					<div id="kodWorks" class="cv-content">
-						<div class="job">
-							<h2>KodWorks</h2>
-							<p class="position">Unity Developer</p>
-							<span class="duration">February 2022 - present</span>
-							<span class="locations">Kragujevac, Serbia (full-time, remote work)</span>
-							<ul>
-								<li>Creating the communication between Unity and React-Native</li>
-								<li>Integration of Astra avatar creation engine</li>
-								<li>Creating socket communication for verification of player moves inside the game</li>
-								<li>Creating Puzzle, Shooter and Tabletop simulator video games optimized for phones</li>
-							</ul>
-							<p><b>Main technologies used:</b> Unity, C#</p>
-						</div>
-						
-						<div class="job" >
-							<h2>GetSwift</h2>
-							<p class="position">Full-stack Developer</p>
-							<span class="duration">October 2020 – January 2021 (1 year 4 months)</span>
-							<span class="locations">Vancouver, Canada (full-time, remote work)</span>
-							<ul>
-								<li>Creating new features both on the back and front end</li>
-								<li>Maintaining application</li>
-								<li>Integration of Twilio API</li>
-								<li>Modeling new databases</li>
-							</ul>
-							<p><b>Main technologies used:</b> C#, .NET Framework, ReactJS, Microsoft SQL Server, Twilio API</p>
-						</div>
-						
-						<div class="job">
-							<h2>Glimmernet Technologies, LLC</h2>
-							<p class="position">Backend Developer</p>
-							<span class="duration">July 2020 - present </span>
-							<span class="locations">Bethesda, Maryland (part-time, remote work)</span>
-							<ul>
-								<li>Creating web pages using .NET Framework</li>
-								<li>Optimization of current databases</li>
-								<li>Modeling new databases</li>
-								<li>Integration of DocuSign for signing documents</li>
-							</ul>
-							<p><b>Main technologies used:</b> .NET Framework, C#, Razor Pages, EntityFramework, Microsoft SQL Server, SignalR, DocuSign </p>
-						</div>
+	</header>
 
-						<div class="job" id="ObEN">
-							<h2>ObEN, Inc</h2>
-							<p class="position">Unity Developer</p>
-							<span class="duration">April 2018 - April 2020 (2 years 1 month)</span>
-							<span class="locations">San Francisco, California (remote work)</span>
-							<ul>
-								<li>Integrating FFMPEG plugin for loudness normalization and video recording</li>
-								<li>Worked on speech recognition and speech to text conversion (Tensorflow, IBM Watson and Snowboy)</li>
-								<li>Senior role in the team creating ObEN SDK</li>
-								<li>Designed and implemented scalable and flexible tool for animation loading</li>
-								<li>Responsible for application’s CPU, memory and loading optimization</li>
-								<li>Worked closely with designers and backend team to deliver the vision of the application</li>
-								<li>Multiplatform support (Windows, OSX, Linux, Android and iOS)</li>
-							</ul>
-							<p><b>Main technologies used:</b> Vuforia AR, Mecanim, Kinect, FFMPEG, Tensorflow, IBM Watson, Snowboy, Photon, Unity Shader Graph, Amazon SQS service, FinalIK</p>
+	<main>
+		<section id="home" class="hero-gradient min-h-screen flex items-center pt-20 pb-16 px-4 overflow-hidden">
+			<div class="container mx-auto max-w-6xl text-center">
+				<div class="inline-block rounded-full border-4 border-emerald-500 shadow-xl overflow-hidden w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-6 profile-border">
+					<img src="./images/about-me/about-me.jpg" alt="Milos Novakovic" class="w-full h-full object-cover profile-image">
+				</div>
+				<p class="text-2xl mb-2">👋</p>
+				<h1 class="text-4xl sm:text-5xl font-bold mb-4 name-gradient">Hi, I'm Miloš Novaković</h1>
+				<h2 class="text-xl sm:text-2xl text-gray-600 mb-8">Unity Developer | Game Developer</h2>
+				<div class="flex flex-wrap justify-center gap-4 mb-6">
+					<a href="mailto:milosnovakovic91@gmail.com" class="social-button inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium transition-all">
+						<i class="fas fa-envelope"></i> Email
+					</a>
+					<a href="https://www.linkedin.com/in/milosnovakovic91/" target="_blank" rel="noopener" class="social-button inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium transition-all">
+						<i class="fab fa-linkedin"></i> LinkedIn
+					</a>
+				</div>
+				<a href="./images/Milos Novakovic - Resume.pdf" download class="download-btn inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+					<i class="fas fa-download"></i> Download Resume
+				</a>
+			</div>
+		</section>
+
+		<section id="about" class="py-20 px-4 about-bg">
+			<div class="container mx-auto max-w-4xl">
+				<h2 class="section-title">About Me</h2>
+				<div class="glass-card p-8">
+					<p class="text-gray-700 leading-relaxed">
+						I am an experienced Unity developer with a deep passion for game development. My creativity and attention to detail drive me to build engaging and immersive experiences. I have a strong interest in gaming, trigonometry, and machine learning, and I thrive in collaborative environments. As a fast learner, I am always eager to take on new challenges and expand my skill set.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills" class="py-20 px-4 skills-bg">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="section-title">Skills</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div class="glass-card skill-card p-6">
+						<h3 class="text-lg font-bold text-emerald-800 mb-4">Game Development</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">Unity</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">C#</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">Game Design</span>
 						</div>
-						<div class="job" id="webelinxID">
-							<h2>WEBELINX</h2>
-							<p class="position">Unity Developer</p>
-							<span class="duration">December 2014 - April 2018 (3 years 5 months)</span>
-							<span class="locations">Niš, Serbia</span>
-							<ul>
-								<li>Responsible for creating a gameplay based on GDD</li>
-								<li>Worked closely with designers to deliver the vision of the game from start to finish</li>
-								<li>Implemented client-side UI that was meeting the requirements of the designers</li>
-								<li>Developed tools that improve designer’s workflow</li>
-								<li>Integration of ads and statistics in the games</li>
-								<li>Multiplatform support (iOS, Android, Windows Phone)</li>
-							</ul>
+					</div>
+					<div class="glass-card skill-card p-6">
+						<h3 class="text-lg font-bold text-emerald-800 mb-4">Unity & Tools</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">Zenject</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">DoTween</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">UniTask</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">DOTS</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">ML-Agents</span>
+						</div>
+					</div>
+					<div class="glass-card skill-card p-6">
+						<h3 class="text-lg font-bold text-emerald-800 mb-4">Other</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">Firebase</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">Git</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">.NET</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">React</span>
+							<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm">SQL Server</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col resume education">
-					<div class="label-container">
-						<h3 class="resume-label">Education</h3>
+		</section>
+
+		<section id="experience" class="py-20 px-4 experience-bg">
+			<div class="container mx-auto max-w-4xl">
+				<h2 class="section-title">Work Experience</h2>
+				<div class="space-y-6">
+					<div class="glass-card p-6 hover-lift">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">Zero To Eight Digital Technologies</h3>
+						<p class="font-semibold text-gray-600 mb-1">Unity Developer</p>
+						<p class="text-gray-500 text-sm mb-4">September 2024 - present · Dubai, United Arab Emirates (full-time, remote work)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Maintain and refactor the existing Unity codebase to improve stability and performance</li>
+							<li>Design and implement new gameplay and application features</li>
+							<li>Improved real-time socket communication with the backend services</li>
+							<li>Added and optimized multi-platform support</li>
+							<li>Redesign of the application to enhance usability and structure</li>
+						</ul>
+						<p class="mt-3 text-sm text-gray-600"><b>Tech:</b> C#, Unity, DoTween, UniTask</p>
+						<a href="./0to8.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm mt-4">View Project <i class="fas fa-arrow-right text-xs"></i></a>
 					</div>
-					<div class="cv-content">
-						<h2>Bachelor of Science in Computer Science</h2>
-						<p>Faculty of Electronic Engineering, University of Nis, Serbia</p>
-						<p>(2010 - 2014)</p>
-						<h3>Education Highlight</h3>
-							<h4>Nikola Tesla Museum, Belgrade</h4>
-							<p>March 2010 – December 2013</p>
-							<ul>
-								<li>Computer simulation and 3D modeling patents and laboratories of Nikola Tesla</li>
-								<li>Modeling and texturing of high and low poly 3D models</li>
-							</ul>
+					<div class="glass-card p-6 hover-lift" id="kodWorks">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">KodWorks</h3>
+						<p class="font-semibold text-gray-600 mb-1">Unity Developer</p>
+						<p class="text-gray-500 text-sm mb-4">February 2022 - June 2024 (2 years 4 months) · Kragujevac, Serbia (full-time, remote work)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Creating communication between Unity and React-Native</li>
+							<li>Integration of Astra avatar creation engine</li>
+							<li>Creating socket communication for verification of player moves; Puzzle, Shooter, and Tabletop games optimized for phones</li>
+						</ul>
+						<p class="mt-3 text-sm text-gray-600"><b>Tech:</b> Unity, C#</p>
+						<a href="./kod-works.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm mt-4">View Projects <i class="fas fa-arrow-right text-xs"></i></a>
+					</div>
+					<div class="glass-card p-6 hover-lift">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">GetSwift</h3>
+						<p class="font-semibold text-gray-600 mb-1">Full-stack Developer</p>
+						<p class="text-gray-500 text-sm mb-4">October 2020 - January 2022 (1 year 4 months) · Vancouver, Canada (full-time, remote work)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Creating new features both on the back and front end; maintaining application</li>
+							<li>Integration of Twilio API; modeling new databases</li>
+						</ul>
+						<p class="mt-3 text-sm text-gray-600"><b>Tech:</b> C#, .NET Framework, ReactJS, Microsoft SQL Server, Twilio API</p>
+					</div>
+					<div class="glass-card p-6 hover-lift">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">Glimmernet Technologies, LLC</h3>
+						<p class="font-semibold text-gray-600 mb-1">Backend Developer</p>
+						<p class="text-gray-500 text-sm mb-4">July 2020 - present · Bethesda, Maryland (part-time, remote work)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Creating web pages using the .NET Framework</li>
+							<li>Optimization of current databases; modeling new databases</li>
+							<li>Integration of DocuSign for signing documents</li>
+						</ul>
+						<p class="mt-3 text-sm text-gray-600"><b>Tech:</b> C#, .NET Framework, Razor Pages, EntityFramework, Microsoft SQL Server, SignalR, DocuSign</p>
+					</div>
+					<div class="glass-card p-6 hover-lift" id="ObEN">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">ObEN</h3>
+						<p class="font-semibold text-gray-600 mb-1">Unity Developer</p>
+						<p class="text-gray-500 text-sm mb-4">April 2018 - April 2020 (2 years 1 month) · San Francisco, California (remote work)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Integrating the FFMPEG plugin for loudness normalization and video recording</li>
+							<li>Worked on speech recognition and speech-to-text conversion (Tensorflow, IBM Watson, Snowboy)</li>
+							<li>Senior role in the team creating ObEN SDK; designed and implemented a scalable tool for animation loading</li>
+							<li>Responsible for the application's CPU, memory, and loading optimization</li>
+							<li>Worked closely with designers and the backend team; multiplatform support (Windows, macOS, Linux, Android, iOS)</li>
+						</ul>
+						<p class="mt-3 text-sm text-gray-600"><b>Tech:</b> Vuforia AR, Kinect, FFMPEG, Tensorflow, IBM Watson, Snowboy, Photon, Unity Shader Graph, Amazon SQS, Mecanim, FinalIK</p>
+						<a href="./oben.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm mt-4">View Projects <i class="fas fa-arrow-right text-xs"></i></a>
+					</div>
+					<div class="glass-card p-6 hover-lift" id="webelinxID">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">WEBELINX</h3>
+						<p class="font-semibold text-gray-600 mb-1">Unity Developer</p>
+						<p class="text-gray-500 text-sm mb-4">December 2014 - April 2018 (3 years 5 months) · Niš, Serbia (full-time)</p>
+						<ul class="feature-list space-y-2 text-gray-700">
+							<li>Responsible for creating gameplay based on the GDD</li>
+							<li>Worked closely with designers to deliver the vision of the game from start to finish</li>
+							<li>Implemented client-side UI that met the requirements of the designers; developed tools that improve the designer's workflow</li>
+							<li>Integration of ads and statistics in the games; multiplatform support (iOS, Android, Windows Phone)</li>
+						</ul>
+						<a href="./webelinx.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm mt-4">View Projects <i class="fas fa-arrow-right text-xs"></i></a>
+					</div>
+					<div class="glass-card p-6 hover-lift">
+						<h3 class="text-xl font-bold text-emerald-800 mb-1">Other Projects</h3>
+						<p class="text-gray-600 mb-4">Personal and side projects — web games, live wallpapers, trivia, 3D modeling, and more.</p>
+						<div class="flex flex-wrap gap-3">
+							<a href="./other-projects.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm">Other Projects <i class="fas fa-arrow-right text-xs"></i></a>
+							<a href="./modeling.html" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm">Modeling <i class="fas fa-arrow-right text-xs"></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
-			
-			<div class="row">
-				<div class="col resume languages">
-					<div class="label-container">
-						<h3 class="resume-label">Languages</h3>
-					</div>
-					<div class="cv-content">
-						<ul>
-							<li>English - upper intermediate (Reading, Writing, Verbal)</li>
-							<li>Serbian - native</li>
+		</section>
+
+		<section id="education" class="py-20 px-4 education-bg">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="section-title">Education</h2>
+				<div class="space-y-6">
+					<div class="glass-card p-6 hover-lift">
+						<h3 class="text-xl font-bold text-emerald-800 mb-2">Bachelor with Honours in Electrical Engineering and Computing</h3>
+						<p class="text-gray-600 mb-1">Faculty of Electronic Engineering, University of Niš, Serbia</p>
+						<p class="text-gray-500 text-sm mb-2">Module — Computer Science and Informatics</p>
+						<p class="text-gray-500 text-sm mb-4">October 2010 – July 2014</p>
+						<h4 class="font-semibold text-emerald-700 mb-2">Additional experience</h4>
+						<p class="text-gray-600">Nikola Tesla Museum, Belgrade — March 2010 – December 2013</p>
+						<ul class="feature-list mt-2 space-y-1 text-gray-700">
+							<li>Computer simulation and 3D modeling of Nikola Tesla's patents and laboratories</li>
+							<li>Modeling and texturing of high and low poly 3D models</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-	</main>
-	<div class="to-top"><i class="fas fa-arrow-up"></i></div>
+		</section>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<section class="py-12 px-4 bg-emerald-50/50">
+			<div class="container mx-auto max-w-4xl text-center">
+				<h2 class="section-title text-2xl mb-6">Languages</h2>
+				<p class="text-gray-700">English — upper intermediate (Reading, Writing, Verbal) · Serbian — native</p>
+			</div>
+		</section>
+
+		<section id="contact" class="py-20 px-4 contact-bg">
+			<div class="container mx-auto max-w-2xl">
+				<h2 class="section-title">Contact Me</h2>
+				<div class="glass-card p-8 text-center">
+					<p class="text-gray-700 mb-6">Get in touch for opportunities or collaboration.</p>
+					<div class="flex flex-wrap justify-center gap-4">
+						<a href="mailto:milosnovakovic91@gmail.com" class="social-button inline-flex items-center gap-2 px-6 py-3 rounded-full">
+							<i class="fas fa-envelope"></i> Email
+						</a>
+						<a href="https://www.linkedin.com/in/milosnovakovic91/" target="_blank" rel="noopener" class="social-button inline-flex items-center gap-2 px-6 py-3 rounded-full">
+							<i class="fab fa-linkedin"></i> LinkedIn
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="py-8 px-4 bg-white border-t border-emerald-100 text-center text-gray-600 text-sm">
+		<p>© 2025 Miloš Novaković. All rights reserved.</p>
+	</footer>
+
+	<div class="to-top fixed right-8 bottom-8 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg opacity-0 pointer-events-none z-40 transition-all duration-300 hover:bg-emerald-600" aria-hidden="true">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./script/myscript.js"></script>
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', function() {
+			document.querySelector('.mobile-menu').classList.toggle('hidden');
+		});
+		document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+			link.addEventListener('click', function() { document.querySelector('.mobile-menu').classList.add('hidden'); });
+		});
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+		});
+		var toTop = document.querySelector('.to-top');
+		window.addEventListener('scroll', function() {
+			if (window.scrollY >= 400) {
+				toTop.classList.remove('opacity-0', 'pointer-events-none');
+				toTop.classList.add('opacity-100');
+				toTop.setAttribute('aria-hidden', 'false');
+			} else {
+				toTop.classList.add('opacity-0', 'pointer-events-none');
+				toTop.classList.remove('opacity-100');
+				toTop.setAttribute('aria-hidden', 'true');
+			}
+		});
+		toTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+		window.addEventListener('load', function() {
+			var hash = window.location.hash;
+			if (hash) {
+				var el = document.querySelector(hash);
+				if (el) {
+					setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+				}
+			}
+		});
+		var sections = document.querySelectorAll('section[id]');
+		var navLinks = document.querySelectorAll('.nav-link');
+		window.addEventListener('scroll', function() {
+			var current = '';
+			sections.forEach(function(section) {
+				var top = section.offsetTop;
+				var height = section.offsetHeight;
+				if (window.scrollY >= top - height / 3) current = section.getAttribute('id');
+			});
+			navLinks.forEach(function(link) {
+				link.classList.remove('text-emerald-600', 'font-semibold');
+				if (link.getAttribute('href') === '#' + current) link.classList.add('text-emerald-600', 'font-semibold');
+			});
+		});
+	</script>
 </body>
 
 </html>
-
-<script>
-	window.addEventListener("load", function () {
-		// Check if there's a hash in the URL
-		const hash = window.location.hash;
-		if (hash) {
-			const element = document.querySelector(hash);
-			if (element) {
-				let headerOffset = 100;
-				if (window.innerWidth < 640)
-					headerOffset = 60;
-				const elementPosition = element.getBoundingClientRect().top;
-				const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-				window.scrollTo({
-					top: offsetPosition,
-					behavior: "smooth"
-				});
-			}
-		}
-	});
-</script>

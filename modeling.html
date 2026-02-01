@@ -1,569 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Milos Novakovic Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3D Modeling — Miloš Novaković Portfolio</title>
 	<link rel="icon" href="favicon.png" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<link href="./css/font-awesome/all.min.css" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>tailwind.config = { theme: { extend: { colors: { emerald: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
 	<link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
-<body>
-	<header>
-		<nav>
-			<div class="mobile-toggle">
-				<span></span>
-				<span></span>
-				<span></span>
+<body class="font-sans text-gray-700 antialiased min-h-screen">
+	<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+		<nav class="container mx-auto px-4 py-4 flex items-center justify-between max-w-6xl">
+			<a href="./index.html" class="text-xl font-bold name-gradient">Miloš Novaković</a>
+			<div class="hidden md:flex items-center gap-8">
+				<a href="./index.html#home" class="nav-link">Home</a>
+				<a href="./index.html#about" class="nav-link">About Me</a>
+				<a href="./index.html#skills" class="nav-link">Skills</a>
+				<a href="./index.html#experience" class="nav-link">Experience</a>
+				<a href="./index.html#education" class="nav-link">Education</a>
+				<a href="./index.html#contact" class="nav-link">Contact</a>
 			</div>
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./kod-works.html">KOD.Works</a></li>
-				<li><a href="./oben.html">ObEN</a></li>
-				<li><a href="./webelinx.html">Webelinx</a></li>
-				<li><a href="./other-projects.html">Other projects</a></li>
-				<li><a href="./modeling.html">Modeling</a></li>
-			</ul>
+			<button id="menu-btn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-emerald-600" aria-label="Menu">
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+			</button>
 		</nav>
+		<div class="mobile-menu hidden md:hidden">
+			<a href="./index.html#home" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Home</a>
+			<a href="./index.html#about" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">About Me</a>
+			<a href="./index.html#skills" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Skills</a>
+			<a href="./index.html#experience" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Experience</a>
+			<a href="./index.html#education" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Education</a>
+			<a href="./index.html#contact" class="block py-3 px-4 hover:bg-emerald-50">Contact</a>
+		</div>
 	</header>
-	<main>
-		<div class="sidebar">
-			<div class="image">
-				<img src="./images/gallery/De Dion Bouton 8 HP/8.jpg" alt="3D Modeling image">
+
+	<main class="pt-20">
+		<section class="hero-gradient py-16 px-4">
+			<div class="container mx-auto max-w-4xl">
+				<div class="glass-card p-8 flex flex-col md:flex-row items-center gap-8">
+					<div class="flex-shrink-0 w-32 md:w-40">
+						<img src="./images/gallery/De Dion Bouton 8 HP/8.jpg" alt="3D Modeling" class="w-full rounded-lg border-2 border-emerald-200 object-cover aspect-square">
+					</div>
+					<div class="flex-1 text-center md:text-left">
+						<h1 class="text-3xl font-bold name-gradient mb-2">3D Modeling</h1>
+						<p class="text-emerald-700 font-semibold mb-4">Used Tools</p>
+						<ul class="feature-list text-gray-700 text-sm space-y-1">
+							<li>Autodesk Maya</li>
+							<li>Photoshop</li>
+							<li>UVLayout</li>
+							<li>Substance Painter</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="description">
-				<h1>3D MODELING</h1>
-				<h3>Used Tools</h3>
-				<ul class="features">
-					<li>Autodesk Maya</li>
-					<li>Photoshop</li>
-					<li>UVLayout</li>
-					<li>Substance Painter</li>
-				</ul>
+		</section>
+
+		<section class="py-16 px-4 projects-bg">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="section-title">Galleries</h2>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Space Racer – Galaxy Racing</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+						<a href="./images/gallery/SpaceRacer/render_1.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/render_1.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/render_2.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/render_2.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/render_3.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/render_3.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/render_4.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/render_4.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/1.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/1.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/2.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/2.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_2.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_2.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_3.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_3.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_4.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_4.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_5.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_5.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_6.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_6.png" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/SpaceRacer/map_7.png" data-fancybox="spaceracer" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/SpaceRacer/map_7.png" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Long Island Laboratory basement</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/LongIslandBasement/1.PNG" data-fancybox="longisland" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/LongIslandBasement/1.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/LongIslandBasement/2.PNG" data-fancybox="longisland" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/LongIslandBasement/2.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/LongIslandBasement/3.PNG" data-fancybox="longisland" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/LongIslandBasement/3.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/LongIslandBasement/4.PNG" data-fancybox="longisland" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/LongIslandBasement/4.PNG" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Trafo station</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Trafo/1.PNG" data-fancybox="trafo" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Trafo/1.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Trafo/2.PNG" data-fancybox="trafo" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Trafo/2.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Trafo/3.PNG" data-fancybox="trafo" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Trafo/3.PNG" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Trafo/4.PNG" data-fancybox="trafo" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Trafo/4.PNG" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">De Dion Bouton 8 HP</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+						<a href="./images/gallery/De Dion Bouton 8 HP/1.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/2.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/3.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/4.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/5.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/6.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/7.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/8.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/9.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/9.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/10.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/10.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/11.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/11.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/12.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/12.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/De Dion Bouton 8 HP/13.jpg" data-fancybox="dedion" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/De Dion Bouton 8 HP/13.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Hotel orient</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Hotel orient/1.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/2.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/3.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/4.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/5.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/6.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/7.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Hotel orient/8.jpg" data-fancybox="hotel" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Hotel orient/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Nikola Tesla</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+						<a href="./images/gallery/Tesla/1.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/2.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/3.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/4.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/5.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/6.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/7.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/8.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/9.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/9.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/10.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/10.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/11.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/11.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/12.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/12.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Tesla/13.jpg" data-fancybox="tesla" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Tesla/13.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Monster truck</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Monster truck/1.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/2.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/3.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/4.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/5.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/6.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/7.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Monster truck/8.jpg" data-fancybox="monster" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Monster truck/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Dodge Charger</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Dodge Charger/1.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Dodge Charger/2.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Dodge Charger/3.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Dodge Charger/4.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Dodge Charger/5.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Dodge Charger/6.jpg" data-fancybox="dodge" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Dodge Charger/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Bugatti Veyron</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Bugatti Veyron/1.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Bugatti Veyron/2.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Bugatti Veyron/3.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Bugatti Veyron/4.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Bugatti Veyron/5.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Bugatti Veyron/6.jpg" data-fancybox="bugatti" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Bugatti Veyron/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Genius remote</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+						<a href="./images/gallery/Genius remote/1.jpg" data-fancybox="genius" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Genius remote/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Genius remote/2.jpg" data-fancybox="genius" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Genius remote/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Genius remote/3.jpg" data-fancybox="genius" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Genius remote/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Genius remote/4.jpg" data-fancybox="genius" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Genius remote/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Genius remote/5.jpg" data-fancybox="genius" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Genius remote/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Fan</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Fan/1.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/2.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/3.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/4.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/5.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/7.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/8.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Fan/9.jpg" data-fancybox="fan" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Fan/9.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
+
+				<div class="glass-card p-6 mb-8">
+					<h3 class="text-xl font-bold text-emerald-800 mb-4">Ring</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+						<a href="./images/gallery/Ring/1.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/1.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/2.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/2.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/3.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/3.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/4.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/4.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/5.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/5.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/6.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/6.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/7.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/7.jpg" alt="" class="w-full h-40 object-cover"></a>
+						<a href="./images/gallery/Ring/8.jpg" data-fancybox="ring" class="block rounded-lg overflow-hidden border border-emerald-100 hover:border-emerald-300"><img src="./images/thumbnails/Ring/8.jpg" alt="" class="w-full h-40 object-cover"></a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="page-content modeling">
-				<div class="row">
-					<div class="col">
-						<b>Space Racer - Galaxy Racing</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/render_1.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/render_1.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/render_2.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/render_2.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/render_3.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/render_3.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/render_4.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/render_4.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/1.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/1.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/2.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/2.png">
-						</a>
-					</div>
-
-				
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_2.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_2.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_3.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_3.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_4.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_4.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_5.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_5.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_6.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_6.png">
-						</a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/SpaceRacer/map_7.png" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/SpaceRacer/map_7.png">
-						</a>
-					</div>
-				</div>
-		
-				<div class="row">
-					<div class="col">
-						<b>Long Island Laboratory basement</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/LongIslandBasement/1.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/LongIslandBasement/1.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/LongIslandBasement/2.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/LongIslandBasement/2.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/LongIslandBasement/3.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/LongIslandBasement/3.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/LongIslandBasement/4.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/LongIslandBasement/4.PNG"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Trafo station</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/Trafo/1.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Trafo/1.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/Trafo/2.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Trafo/2.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/Trafo/3.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Trafo/3.PNG"> </a>
-					</div>
-
-					<div class="col col-4">
-						<a href="./images/gallery/Trafo/4.PNG" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Trafo/4.PNG"> </a>
-					</div>
-
-				</div>
-
-
-				<div class="row">
-					<div class="col">
-						<b>De Dion Bouton 8 HP</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/1.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/2.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/3.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/4.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/5.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/6.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/7.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/8.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/9.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/9.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/10.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/10.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/11.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/11.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/12.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/12.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/De Dion Bouton 8 HP/13.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/De Dion Bouton 8 HP/13.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Hotel orient</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/1.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/2.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/3.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/4.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/5.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/6.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/7.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Hotel orient/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Hotel orient/8.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Nikola Tesla</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/1.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/2.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/3.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/4.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/5.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/6.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/7.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/8.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/9.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/9.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/10.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/10.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/11.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/11.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/12.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/12.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Tesla/13.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Tesla/13.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Monster truck</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/1.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/2.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/3.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/4.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/5.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/6.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/7.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Monster truck/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Monster truck/8.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Dodge Charger</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/1.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/2.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/3.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/4.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/5.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Dodge Charger/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Dodge Charger/6.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Bugatti Veyron</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-6">
-						<a href="./images/gallery/Bugatti Veyron/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/1.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Bugatti Veyron/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/2.jpg"> </a>
-					</div>
-					<div class="col col-6 ">
-						<a href="./images/gallery/Bugatti Veyron/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/3.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Bugatti Veyron/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/4.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Bugatti Veyron/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/5.jpg"> </a>
-					</div>
-					<div class="col col-6">
-						<a href="./images/gallery/Bugatti Veyron/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Bugatti Veyron/6.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Genius remote</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-5">
-						<a href="./images/gallery/Genius remote/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Genius remote/1.jpg"> </a>
-					</div>
-					<div class="col col-5">
-						<a href="./images/gallery/Genius remote/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Genius remote/2.jpg"> </a>
-					</div>
-					<div class="col col-5">
-						<a href="./images/gallery/Genius remote/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Genius remote/3.jpg"> </a>
-					</div>
-					<div class="col col-5">
-						<a href="./images/gallery/Genius remote/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Genius remote/4.jpg"> </a>
-					</div>
-					<div class="col col-5">
-						<a href="./images/gallery/Genius remote/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Genius remote/5.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Fan</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/1.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/2.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/3.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/4.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/5.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/7.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/8.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Fan/9.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Fan/9.jpg"> </a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<b>Ring</b>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/1.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/1.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/2.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/2.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/3.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/3.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/4.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/4.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/5.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/5.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/6.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/6.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/7.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/7.jpg"> </a>
-					</div>
-					<div class="col col-4">
-						<a href="./images/gallery/Ring/8.jpg" rel="modeling" data-fancybox="gallery">
-							<img src="./images/thumbnails/Ring/8.jpg"> </a>
-					</div>
-				</div>
-		</div>
+		</section>
 	</main>
-	<div class="to-top"><i class="fas fa-arrow-up"></i></div>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<footer class="py-8 px-4 bg-white border-t border-emerald-100 text-center text-gray-600 text-sm">
+		<p>© 2025 Miloš Novaković. All rights reserved.</p>
+	</footer>
+
+	<div class="to-top fixed right-8 bottom-8 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg opacity-0 pointer-events-none z-40 transition-all duration-300 hover:bg-emerald-600">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="./script/myscript.js"></script>
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', function() { document.querySelector('.mobile-menu').classList.toggle('hidden'); });
+		document.querySelectorAll('.mobile-menu a').forEach(function(link) { link.addEventListener('click', function() { document.querySelector('.mobile-menu').classList.add('hidden'); }); });
+		var toTop = document.querySelector('.to-top');
+		window.addEventListener('scroll', function() {
+			if (window.scrollY >= 400) { toTop.classList.remove('opacity-0', 'pointer-events-none'); toTop.classList.add('opacity-100'); }
+			else { toTop.classList.add('opacity-0', 'pointer-events-none'); toTop.classList.remove('opacity-100'); }
+		});
+		toTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+	</script>
 </body>
 
 </html>

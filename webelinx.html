@@ -1,132 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Milos Novakovic Portfolio</title>
+	<title>Webelinx — Milos Novakovic Portfolio</title>
 	<link rel="icon" href="favicon.png" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link href="./css/font-awesome/all.min.css" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						emerald: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46' }
+					},
+					fontFamily: { sans: ['Inter', 'sans-serif'] }
+				}
+			}
+		};
+	</script>
 	<link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
-<body>
-	<header>
-		<nav>
-			<div class="mobile-toggle">
-				<span></span>
-				<span></span>
-				<span></span>
+<body class="font-sans text-gray-700 antialiased min-h-screen">
+	<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+		<nav class="container mx-auto px-4 py-4 flex items-center justify-between max-w-6xl">
+			<a href="./index.html" class="text-xl font-bold name-gradient">Miloš Novaković</a>
+			<div class="hidden md:flex items-center gap-8">
+				<a href="./index.html#home" class="nav-link">Home</a>
+				<a href="./index.html#about" class="nav-link">About Me</a>
+				<a href="./index.html#skills" class="nav-link">Skills</a>
+				<a href="./index.html#experience" class="nav-link">Experience</a>
+				<a href="./index.html#education" class="nav-link">Education</a>
+				<a href="./index.html#contact" class="nav-link">Contact</a>
 			</div>
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./kod-works.html">KOD.Works</a></li>
-				<li><a href="./oben.html">ObEN</a></li>
-				<li><a href="./webelinx.html">Webelinx</a></li>
-				<li><a href="./other-projects.html">Other projects</a></li>
-				<li><a href="./modeling.html">Modeling</a></li>
-			</ul>
+			<button id="menu-btn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-emerald-600" aria-label="Menu">
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+			</button>
 		</nav>
+		<div class="mobile-menu hidden md:hidden">
+			<a href="./index.html#home" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Home</a>
+			<a href="./index.html#about" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">About Me</a>
+			<a href="./index.html#skills" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Skills</a>
+			<a href="./index.html#experience" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Experience</a>
+			<a href="./index.html#education" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Education</a>
+			<a href="./index.html#contact" class="block py-3 px-4 hover:bg-emerald-50">Contact</a>
+		</div>
 	</header>
-	<main>
-		<div class="sidebar">
-			<div class="image">
-				<img src="./images/webelinx/webelinx-logo.jpg" alt="Webelinx logo image">
+
+	<main class="pt-20">
+		<section class="hero-gradient py-16 px-4">
+			<div class="container mx-auto max-w-4xl">
+				<div class="glass-card p-8 flex flex-col md:flex-row items-center gap-8">
+					<div class="flex-shrink-0 w-32 md:w-40">
+						<img src="./images/webelinx/webelinx-logo.jpg" alt="Webelinx logo" class="w-full rounded-lg border-2 border-emerald-200 object-cover aspect-square">
+					</div>
+					<div class="flex-1 text-center md:text-left">
+						<h1 class="text-3xl font-bold name-gradient mb-2">WEBELINX</h1>
+						<p class="text-emerald-700 font-semibold mb-4">Unity Developer — Full time</p>
+						<p class="text-gray-600 text-sm mb-4">Dec 2014 — Apr 2018 · 3 years 5 months</p>
+						<ul class="feature-list text-gray-700 text-sm space-y-1 mb-4">
+							<li>Creating gameplay based on GDD</li>
+							<li>Client-side UI, designer workflow tools</li>
+							<li>Ads and analytics integration</li>
+						</ul>
+						<a href="./index.html#webelinxID" class="link-button inline-flex items-center gap-2 py-2 px-4 rounded-lg text-sm">Read more on portfolio <i class="fas fa-arrow-right text-xs"></i></a>
+					</div>
+				</div>
 			</div>
-			<div class="description">
-				<h1>WEBELINX</h1>
-				<h2 class="profession-title">Unity Developer - Full time</h2>
-				<h3>Duration</h3>
-				<ul class="duration">
-					<li>Dec 2014 - Apr 2018 &middot; 3 years 5 months</li>
-				</ul>
-				<h3>Responsibilities</h3>
-				<ul class="brief-job-desc">
-					<li>Responsible for creating a gameplay based on GDD</li>
-					<li>Worked closely with designers to deliver the vision of the game from start to finish</li>
-					<li>Implemented client-side UI that was meeting the requirements of the designers</li>
-					<a href="./index.html#webelinxID" class="read-more">...read more</a>
-				</ul>
+		</section>
+
+		<section class="py-16 px-4 projects-bg">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="section-title">Projects</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://lh3.googleusercontent.com/kY6nDzUr-YpdWybPHOI1Qg-vFI6w2Q0BWRNUYQZe6_BvQQRV60RP9By91VRGLBVom5o=s180-rw" alt="Love Story Games" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Love Story Games: Time Travel Romance</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple18/v4/13/12/75/1312756d-6c1d-b402-e7c3-5e8671fd102b/mzl.nokcujok.png/460x0w.png" alt="Jewel Mystery" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Jewel Mystery Deluxe Match 3</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://cdn.aptoide.com/imgs/c/0/9/c09957067b483ea91b18f8b1b2df4642_icon.png" alt="Boutique Fashion" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">My Boutique Fashion Shop Game</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://lh3.googleusercontent.com/gn0vwXltNDRxepIgAHZn6NqIvVzkRjXEYRzX_RXT-kfAg8F7AYt_oH008kTQY8-fYw=s180-rw" alt="Anime Avatar Maker" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Anime Avatar Maker</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://images.sftcdn.net/images/t_app-icon-m/p/fae59085-0730-4946-a7c4-9dfab69651cd/3265875274/nail-art-fashion-salon-game-logo" alt="Nail Art" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Nail Art Fashion Salon</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://lh3.googleusercontent.com/zlPAFSEyjIAILt-LcO1r2z4mkRnDXLT3qq-ksQoG79wk3p_cWHyx56nT-4nNWyjq1I7N=s180-rw" alt="Love Story Fantasy" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Love Story: Fantasy Games</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://play-lh.googleusercontent.com/Jj1Q988F-a9LQAJfh9xni7wSpg9yhVFsq-kVaUPKs3jIbyTDlsA62mlYoRLWzjPLkXg=s180-rw" alt="Wedding Dress Maker" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">Wedding Dress Maker</p>
+						</div>
+					</div>
+					<div class="glass-card project-card overflow-hidden group">
+						<div class="block relative">
+							<img src="https://play-lh.googleusercontent.com/dwc2yadZP8rCTbQhiwIyKa-HbCOe53ddvX-yAZDrANXuNW_aRMxUZNjzAcjrdTUenAzv=s180-rw" alt="High Heels" class="w-full aspect-square object-cover">
+							<p class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-black/70 text-white text-sm font-medium">High Heels Designer Girl Games</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="page-content webelinx">
-			<div class="row">
-
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Love.Story.Games.Romance.Choice"
-					   target="_blank">
-						<img src="https://lh3.googleusercontent.com/kY6nDzUr-YpdWybPHOI1Qg-vFI6w2Q0BWRNUYQZe6_BvQQRV60RP9By91VRGLBVom5o=s180-rw">
-					</a>
-					<p class="project-title">Love Story Games: Time Travel Romance</p>
-				</div>
-
-				<div class="col col-4">
-					<a href="https://apps.apple.com/us/app/jewel-mystery-deluxe-match-3-find-the-lost-diamond-in-the-crazy-colors-adventure-mania/id1116703512?mt=8"
-					   target="_blank">
-						<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple18/v4/13/12/75/1312756d-6c1d-b402-e7c3-5e8671fd102b/mzl.nokcujok.png/460x0w.png">
-					</a>
-					<p class="project-title">Jewel Mystery Deluxe Match 3</p>
-				</div>
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Boutique.Fashion.Shop.Game.Girls.Levels" target="_blank">
-						<img src="https://lh3.googleusercontent.com/iUrv1kgXYmc5WfiQG87sGGOXZ5Wbet5Klxs8htJS0Ul-LVACuXyWgOIHIOZ6khs2cSQ=s180-rw">
-					</a>
-					<p class="project-title">My Boutique Fashion Shop Game: Shopping Fever</p>
-				</div>
-
-
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Avatar.Maker.Shadowtime" target="_blank">
-						<img src="https://lh3.googleusercontent.com/gn0vwXltNDRxepIgAHZn6NqIvVzkRjXEYRzX_RXT-kfAg8F7AYt_oH008kTQY8-fYw=s180-rw">
-					</a>
-					<p class="project-title">Anime Avatar Maker - Character Creator</p>
-				</div>
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Nail.Art.Fashion.Salon" target="_blank">
-						<img src="https://lh3.googleusercontent.com/ZONWDevJERqqX-wLyPOfb9bMjreuBd8w7s_SXdoZyIi3ngiA3oU_jmQt3z0fc9A1tj4=s180-rw">
-					</a>
-					<p class="project-title">Nail Art Fashion Salon: Manicure and Pedicure Game</p>
-				</div>
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Fantasy.Love.Story.Games"
-					   target="_blank">
-						<img src="https://lh3.googleusercontent.com/zlPAFSEyjIAILt-LcO1r2z4mkRnDXLT3qq-ksQoG79wk3p_cWHyx56nT-4nNWyjq1I7N=s180-rw">
-					</a>
-					<p class="project-title">Love Story: Fantasy Games</p>
-				</div>
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.Wedding.Dress.Maker.Game" target="_blank">
-						<img src="https://play-lh.googleusercontent.com/Jj1Q988F-a9LQAJfh9xni7wSpg9yhVFsq-kVaUPKs3jIbyTDlsA62mlYoRLWzjPLkXg=s180-rw">
-					</a>
-					<p class="project-title">Wedding Dress Maker and Shoe Designer Games</p>
-				</div>
-
-				<div class="col col-4">
-					<a href="https://play.google.com/store/apps/details?id=com.High.Heels.Designer.Girl.Games"
-					   target="_blank">
-						<img src="https://play-lh.googleusercontent.com/dwc2yadZP8rCTbQhiwIyKa-HbCOe53ddvX-yAZDrANXuNW_aRMxUZNjzAcjrdTUenAzv=s180-rw">
-					</a>
-					<p class="project-title">High Heels Designer Girl Games</p>
-				</div>
-
-
-			</div>
-		</div>
+		</section>
 	</main>
-	<div class="to-top"><i class="fas fa-arrow-up"></i></div>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<footer class="py-8 px-4 bg-white border-t border-emerald-100 text-center text-gray-600 text-sm">
+		<p>© 2025 Miloš Novaković. All rights reserved.</p>
+	</footer>
+
+	<div class="to-top fixed right-8 bottom-8 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg opacity-0 pointer-events-none z-40 transition-all duration-300 hover:bg-emerald-600">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./script/myscript.js"></script>
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', function() {
+			document.querySelector('.mobile-menu').classList.toggle('hidden');
+		});
+		document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+			link.addEventListener('click', function() { document.querySelector('.mobile-menu').classList.add('hidden'); });
+		});
+		var toTop = document.querySelector('.to-top');
+		window.addEventListener('scroll', function() {
+			if (window.scrollY >= 400) {
+				toTop.classList.remove('opacity-0', 'pointer-events-none');
+				toTop.classList.add('opacity-100');
+			} else {
+				toTop.classList.add('opacity-0', 'pointer-events-none');
+				toTop.classList.remove('opacity-100');
+			}
+		});
+		toTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+	</script>
 </body>
 
 </html>

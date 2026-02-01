@@ -1,133 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta property="og:title" content="Milos Novakovic Portfolio">
-	<meta property="og:description" content="I’m an experienced Unity developer with passion for game development, very creative and focused on details">
+	<meta property="og:title" content="Miloš Novaković Portfolio">
+	<meta property="og:description" content="I'm an experienced Unity developer with passion for game development, very creative and focused on details">
 	<meta property="og:image" content="https://milosnovakovic.github.io/images/preview.jpg">
-	<meta property="og:url" content="https://milosnovakovic.github.io/index.html"> 
-	<title>Milos Novakovic Portfolio</title>
+	<meta property="og:url" content="https://milosnovakovic.github.io/index.html">
+	<title>House — Miloš Novaković Portfolio</title>
 	<link rel="icon" href="favicon.png" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link href="./css/font-awesome/all.min.css" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>tailwind.config = { theme: { extend: { colors: { emerald: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
 	<link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
-<body>
-	<p id="name" style="
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	font-size: 25px;"></p>
+<body class="font-sans text-gray-700 antialiased min-h-screen bg-gray-900">
+	<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+		<nav class="container mx-auto px-4 py-4 flex items-center justify-between max-w-6xl">
+			<a href="./index.html" class="text-xl font-bold name-gradient">Miloš Novaković</a>
+			<div class="hidden md:flex items-center gap-8">
+				<a href="./index.html#home" class="nav-link">Home</a>
+				<a href="./index.html#about" class="nav-link">About Me</a>
+				<a href="./index.html#skills" class="nav-link">Skills</a>
+				<a href="./index.html#experience" class="nav-link">Experience</a>
+				<a href="./index.html#education" class="nav-link">Education</a>
+				<a href="./index.html#contact" class="nav-link">Contact</a>
+			</div>
+			<button id="menu-btn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-emerald-600" aria-label="Menu">
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+				<span class="block w-6 h-0.5 bg-current rounded"></span>
+			</button>
+		</nav>
+		<div class="mobile-menu hidden md:hidden">
+			<a href="./index.html#home" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Home</a>
+			<a href="./index.html#about" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">About Me</a>
+			<a href="./index.html#skills" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Skills</a>
+			<a href="./index.html#experience" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Experience</a>
+			<a href="./index.html#education" class="block py-3 px-4 border-b border-gray-100 hover:bg-emerald-50">Education</a>
+			<a href="./index.html#contact" class="block py-3 px-4 hover:bg-emerald-50">Contact</a>
+		</div>
+	</header>
 
-	<button id="leftBtnID" onclick="leftBtn()" style="
-	position: fixed;
-    width: 180px;
-    height: 640px;
-    background-color: #0000;
-    text-align: left;
-    color: white;
-    font-size: 25px;
-    outline: none;
-    padding-left: 10px;
-    border: 0;" ><</button>
+	<main class="pt-16 min-h-screen">
+		<p id="name" class="fixed top-16 left-0 right-0 text-center text-xl text-white z-10 pt-4"></p>
 
-	<button id="rightBtnID" onclick="rightBtn()" style="
-	position: fixed;
-    width: 180px;
-    height: 640px;
-    right: 0px;
-    background-color: #0000;
-    text-align: right;
-    color: white;
-    font-size: 25px;
-    outline: none;
-    padding-right: 10px;
-    border: 0;">></button>
+		<button id="leftBtnID" onclick="leftBtn()" class="fixed left-0 top-0 bottom-0 w-24 md:w-40 bg-transparent text-white text-3xl z-20 cursor-pointer hover:bg-white/5 transition-colors flex items-center justify-start pl-2" aria-label="Previous">&lt;</button>
 
-   
+		<button id="rightBtnID" onclick="rightBtn()" class="fixed right-0 top-0 bottom-0 w-24 md:w-40 bg-transparent text-white text-3xl z-20 cursor-pointer hover:bg-white/5 transition-colors flex items-center justify-end pr-2" aria-label="Next">&gt;</button>
 
-	<img id="doleLevo" src=""> 
-	<img id="doleDesno" src=""> 
-	<img id="goreDesno" src=""> 
-	
+		<img id="doleLevo" src="" alt="" class="pointer-events-none">
+		<img id="doleDesno" src="" alt="" class="pointer-events-none">
+		<img id="goreDesno" src="" alt="" class="pointer-events-none">
+	</main>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<footer class="py-6 px-4 bg-gray-900 border-t border-gray-700 text-center text-gray-400 text-sm">
+		<p>© 2025 Miloš Novaković. All rights reserved.</p>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./script/myscript.js"></script>
 	<script>
+		document.getElementById('menu-btn').addEventListener('click', function() { document.querySelector('.mobile-menu').classList.toggle('hidden'); });
+		document.querySelectorAll('.mobile-menu a').forEach(function(link) { link.addEventListener('click', function() { document.querySelector('.mobile-menu').classList.add('hidden'); }); });
+
 		var currentID = 0;
 		var fileNames = ["0111", "0112", "0113", "0114", "0115",
-		"0121", "0122", "0123", "0124", "0125",
-		"0131", "0132", "0133", "0134", "0135",
-		"0141", "0142", "0143", "0144", "0145",
+			"0121", "0122", "0123", "0124", "0125",
+			"0131", "0132", "0133", "0134", "0135",
+			"0141", "0142", "0143", "0144", "0145",
+			"0411", "0412", "0413", "0414", "0415",
+			"0421", "0422", "0423", "0424", "0425",
+			"0431", "0432", "0433", "0434", "0435",
+			"0441", "0442", "0443", "0444", "0445",
+			"0611", "0612", "0613", "0614", "0615",
+			"0621", "0622", "0623", "0624", "0625",
+			"0631", "0632", "0633", "0634", "0635",
+			"0641", "0642", "0643", "0644", "0645",
+			"0311", "0312", "0313", "0314", "0315",
+			"0321", "0322", "0323", "0324", "0325",
+			"0331", "0332", "0333", "0334", "0335",
+			"0341", "0342", "0343", "0344", "0345",
+			"0711", "0712", "0713", "0714", "0715",
+			"0721", "0722", "0723", "0724", "0725",
+			"0731", "0732", "0733", "0734", "0735",
+			"0741", "0742", "0743", "0744", "0745",
+			"0211", "0212", "0213", "0214", "0215",
+			"0221", "0222", "0223", "0224", "0225",
+			"0231", "0232", "0233", "0234", "0235",
+			"0241", "0242", "0243", "0244", "0245",
+			"0511", "0512", "0513", "0514", "0515",
+			"0521", "0522", "0523", "0524", "0525",
+			"0531", "0532", "0533", "0534", "0535",
+			"0541", "0542", "0543", "0544", "0545"];
 
-		"0411", "0412", "0413", "0414", "0415",
-		"0421", "0422", "0423", "0424", "0425",
-		"0431", "0432", "0433", "0434", "0435",
-		"0441", "0442", "0443", "0444", "0445",
-
-		"0611", "0612", "0613", "0614", "0615",
-		"0621", "0622", "0623", "0624", "0625",
-		"0631", "0632", "0633", "0634", "0635",
-		"0641", "0642", "0643", "0644", "0645",
-
-		"0311", "0312", "0313", "0314", "0315",
-		"0321", "0322", "0323", "0324", "0325",
-		"0331", "0332", "0333", "0334", "0335",
-		"0341", "0342", "0343", "0344", "0345",
-
-		"0711", "0712", "0713", "0714", "0715",
-		"0721", "0722", "0723", "0724", "0725",
-		"0731", "0732", "0733", "0734", "0735",
-		"0741", "0742", "0743", "0744", "0745",
-
-		"0211", "0212", "0213", "0214", "0215",
-		"0221", "0222", "0223", "0224", "0225",
-		"0231", "0232", "0233", "0234", "0235",
-		"0241", "0242", "0243", "0244", "0245",
-
-		"0511", "0512", "0513", "0514", "0515",
-		"0521", "0522", "0523", "0524", "0525",
-		"0531", "0532", "0533", "0534", "0535",
-		"0541", "0542", "0543", "0544", "0545"];
-
-		function leftBtn()
-		{
+		function leftBtn() {
 			currentID--;
-			if(currentID < 0)
-				currentID = fileNames.length - 1;
-
+			if (currentID < 0) currentID = fileNames.length - 1;
 			updateImages();
 		}
 
-		function rightBtn()
-		{
+		function rightBtn() {
 			currentID++;
-			if(currentID > fileNames.length - 1)
-				currentID = 0;
-
+			if (currentID > fileNames.length - 1) currentID = 0;
 			updateImages();
 		}
 
-		function updateImages()
-		{
+		function updateImages() {
 			$("#name").text(fileNames[currentID]);
-			$("#doleLevo").attr("src","images/house/DoleLevo/" + fileNames[currentID]+".png");
-			$("#doleDesno").attr("src","images/house/DoleDesno/" + fileNames[currentID]+".png");
-			$("#goreDesno").attr("src","images/house/GoreDesno/" + fileNames[currentID]+".png");
+			$("#doleLevo").attr("src", "images/house/DoleLevo/" + fileNames[currentID] + ".png");
+			$("#doleDesno").attr("src", "images/house/DoleDesno/" + fileNames[currentID] + ".png");
+			$("#goreDesno").attr("src", "images/house/GoreDesno/" + fileNames[currentID] + ".png");
 		}
 		updateImages();
 
-		$('#leftBtnID').css('width', $( window ).width()/2 + 'px');
-		$('#rightBtnID').css('width', $( window ).width()/2 + 'px');
-		$('#leftBtnID').css('height', $( window ).height() + 'px');
-		$('#rightBtnID').css('height', $( window ).height() + 'px');
+		$('#leftBtnID').css('width', $(window).width() / 2 + 'px');
+		$('#rightBtnID').css('width', $(window).width() / 2 + 'px');
+		$('#leftBtnID').css('height', $(window).height() + 'px');
+		$('#rightBtnID').css('height', $(window).height() + 'px');
 	</script>
 </body>
 
