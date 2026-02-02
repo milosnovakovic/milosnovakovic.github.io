@@ -8,15 +8,7 @@ $(document).ready(function () {
     });
 });
 
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
 
-    if (scroll >= 100) {
-        $(".to-top").addClass("on");
-    } else {
-        $(".to-top").removeClass("on");
-    }
-});
 
 if (typeof $.fn.fancybox !== 'undefined') {
     $('[data-fancybox]').fancybox({
