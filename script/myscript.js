@@ -9,29 +9,24 @@ $(document).ready(function () {
 });
 
 (function () {
-    var toTopVisible = false;
-    var ticking = false;
-    var SHOW_AT = 120;
-    var HIDE_AT = 80;
+    var toTop = document.querySelector(".to-top");
+    if (!toTop) return;
 
-    function updateToTop() {
-        var scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-        var shouldShow = scroll >= (toTopVisible ? HIDE_AT : SHOW_AT);
-        if (shouldShow !== toTopVisible) {
-            toTopVisible = shouldShow;
-            $(".to-top").toggleClass("on", toTopVisible);
-        }
-        ticking = false;
-    }
+    var sentinel = document.createElement("div");
+    sentinel.setAttribute("aria-hidden", "true");
+    sentinel.style.cssText =
+        "position:absolute;top:100px;left:0;width:1px;height:1px;pointer-events:none;visibility:hidden;z-index:-1;";
+    document.body.appendChild(sentinel);
 
-    function onScroll() {
-        if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(updateToTop);
-        }
-    }
-
-    $(window).on("scroll", onScroll);
+    var observer = new IntersectionObserver(
+        function (entries) {
+            var entry = entries[0];
+            if (!entry) return;
+            $(toTop).toggleClass("on", !entry.isIntersecting);
+        },
+        { root: null, rootMargin: "0px", threshold: 0 }
+    );
+    observer.observe(sentinel);
 })();
 
 if (typeof $.fn.fancybox !== 'undefined') {
